@@ -120,7 +120,7 @@
         CGFloat width = (self.collectionView.fs_width-self.sectionInsets.left-self.sectionInsets.right)/7.0;
         CGFloat height = ({
             CGFloat height = FSCalendarStandardRowHeight;
-            if (!self.calendar.floatingMode) {
+            if (!self.calendar.floatingMode && !self.calendar.forceToUseRowHeight) {
                 switch (self.calendar.transitionCoordinator.representingScope) {
                     case FSCalendarScopeMonth: {
                         height = (self.collectionView.fs_height-self.sectionInsets.top-self.sectionInsets.bottom+self.itemContentInset.top

@@ -181,6 +181,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     _scrollEnabled = YES;
     _needsAdjustingViewFrame = YES;
     _needsRequestingBoundingDates = YES;
+    _forceToUseRowHeight = NO;
     _orientation = self.currentCalendarOrientation;
     _placeholderType = FSCalendarPlaceholderTypeFillSixRows;
     

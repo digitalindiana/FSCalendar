@@ -403,6 +403,11 @@ IB_DESIGNABLE
 @property (readonly, nonatomic) NSArray<NSDate *> *selectedDates;
 
 /**
+ A Boolean value that determines whether height is static.
+ */
+@property (assign, nonatomic) IBInspectable BOOL forceToUseRowHeight;
+
+/**
  Reload the dates and appearance of the calendar.
  */
 - (void)reloadData;
