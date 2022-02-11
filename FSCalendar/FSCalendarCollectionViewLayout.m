@@ -200,7 +200,7 @@
     self.numberOfSections = self.collectionView.numberOfSections;
     self.contentSize = ({
         CGSize contentSize = CGSizeZero;
-        if (!self.calendar.floatingMode && !self.calendar.forceToUseRowHeight) {
+        if (!self.calendar.floatingMode) {
             CGFloat width = self.collectionView.fs_width;
             CGFloat height = self.collectionView.fs_height;
             switch (self.scrollDirection) {
