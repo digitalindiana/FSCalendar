@@ -510,6 +510,16 @@ IB_DESIGNABLE
  */
 - (void)handleScopeGesture:(UIPanGestureRecognizer *)sender;
 
+/**
+ Additional cell insets
+ */
+- (void)setCellInsets:(UIEdgeInsets)inset;
+
+/**
+ Invalidate collection view layout
+ */
+- (void)invalidateLayout;
+
 @end
 
 

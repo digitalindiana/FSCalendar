@@ -1126,6 +1126,11 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     [self.transitionCoordinator handleScopeGesture:sender];
 }
 
+- (void)setCellInsets:(UIEdgeInsets)inset
+{
+    self.collectionViewLayout.itemContentInset = inset;
+}
+
 #pragma mark - Private methods
 
 - (void)scrollToDate:(NSDate *)date

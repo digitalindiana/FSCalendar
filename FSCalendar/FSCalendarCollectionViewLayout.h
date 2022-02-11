@@ -15,6 +15,7 @@
 @property (weak, nonatomic) FSCalendar *calendar;
 
 @property (assign, nonatomic) UIEdgeInsets sectionInsets;
+@property (assign, nonatomic) UIEdgeInsets itemContentInset;
 @property (assign, nonatomic) UICollectionViewScrollDirection scrollDirection;
 
 @end

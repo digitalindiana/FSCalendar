@@ -66,7 +66,8 @@
         
         self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         self.sectionInsets = UIEdgeInsetsMake(5, 0, 5, 0);
-        
+        self.itemContentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+
         self.itemAttributes = NSMutableDictionary.dictionary;
         self.headerAttributes = NSMutableDictionary.dictionary;
         self.rowSeparatorAttributes = NSMutableDictionary.dictionary;
@@ -122,11 +123,13 @@
             if (!self.calendar.floatingMode) {
                 switch (self.calendar.transitionCoordinator.representingScope) {
                     case FSCalendarScopeMonth: {
-                        height = (self.collectionView.fs_height-self.sectionInsets.top-self.sectionInsets.bottom)/6.0;
+                        height = (self.collectionView.fs_height-self.sectionInsets.top-self.sectionInsets.bottom+self.itemContentInset.top
+                                  +self.itemContentInset.bottom)/6.0;
                         break;
                     }
                     case FSCalendarScopeWeek: {
-                        height = (self.collectionView.fs_height-self.sectionInsets.top-self.sectionInsets.bottom);
+                        height = (self.collectionView.fs_height-self.sectionInsets.top-self.sectionInsets.bottom+self.itemContentInset.top
+                                  +self.itemContentInset.bottom);
                         break;
                     }
                     default:
