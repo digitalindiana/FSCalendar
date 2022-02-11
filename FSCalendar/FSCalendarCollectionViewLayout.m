@@ -173,7 +173,7 @@
         NSInteger rowCount = self.calendar.transitionCoordinator.representingScope == FSCalendarScopeWeek ? 1 : 6;
         size_t rowSize = sizeof(CGFloat)*rowCount;
         CGFloat *heights = malloc(rowSize);
-        if (!self.calendar.floatingMode) {
+        if (!self.calendar.floatingMode && !self.calendar.forceToUseRowHeight) {
             CGFloat contentHeight = self.collectionView.fs_height - self.sectionInsets.top - self.sectionInsets.bottom;
             FSCalendarSliceCake(contentHeight, rowCount, heights);
         } else {
@@ -200,7 +200,7 @@
     self.numberOfSections = self.collectionView.numberOfSections;
     self.contentSize = ({
         CGSize contentSize = CGSizeZero;
-        if (!self.calendar.floatingMode) {
+        if (!self.calendar.floatingMode && !self.calendar.forceToUseRowHeight) {
             CGFloat width = self.collectionView.fs_width;
             CGFloat height = self.collectionView.fs_height;
             switch (self.scrollDirection) {
